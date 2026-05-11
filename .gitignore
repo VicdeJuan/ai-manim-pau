@@ -1,0 +1,27 @@
+# LaTeX
+*.aux
+*.log
+*.out
+*.pdf
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Agent Context
+.gemini/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.env
+
+# Project specific
+test_compilation.pdf
+test_compilation.aux
+test_compilation.log
+test_compilation.out

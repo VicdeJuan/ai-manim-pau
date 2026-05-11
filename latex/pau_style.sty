@@ -1,0 +1,92 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{latex/pau_style}[2026/05/11 Estilo Base ai-manim-pau]
+
+% --- Paquetes Requeridos ---
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[spanish, es-tabla, es-noshorthands]{babel}
+\RequirePackage{amsmath, amssymb, amsthm}
+\RequirePackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\RequirePackage{tabularx}
+\RequirePackage{graphicx}
+\RequirePackage{colortbl}
+\RequirePackage{xcolor}
+\RequirePackage{enumitem}
+\RequirePackage{helvet}
+\RequirePackage{tcolorbox}
+\RequirePackage{hyperref}
+
+% --- Configuración de Fuente ---
+\renewcommand{\familydefault}{\sfdefault} % Fuente Helvetica (estilo Francisco de Goya)
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\renewcommand{\arraystretch}{1.5}
+
+% --- Colores Oficiales ---
+\definecolor{grisclaro}{gray}{0.85}
+\definecolor{primary}{RGB}{15,118,110}
+
+% --- Comando para la Cabecera Oficial ---
+\newcommand{\CabeceraOficial}{
+    \noindent
+    \begin{tabularx}{\textwidth}{|X|c|c|c|}
+        \hline
+        \textbf{IES FRANCISCO DE GOYA -- LA ELIPA} \par
+        DEPARTAMENTO DE MATEMÁTICAS
+        & 
+        \begin{minipage}[c]{1.6cm}
+            \centering
+            \vspace{0.1cm}
+            \includegraphics[width=1.5cm, height=1.5cm, keepaspectratio]{latex/img/logoUE.jpg}
+            \vspace{0.1cm}
+        \end{minipage}
+        & 
+        \begin{minipage}[c]{1.6cm}
+            \centering
+            \vspace{0.1cm}
+            \includegraphics[width=1.5cm, height=1.5cm, keepaspectratio]{latex/img/logoBilingue.png}
+            \vspace{0.1cm}
+        \end{minipage}
+        & 
+        \begin{minipage}[c]{5cm}
+            \centering
+            \vspace{0.1cm}
+            \includegraphics[width=4.5cm, keepaspectratio]{latex/img/logoCAM.png}
+            \vspace{0.1cm}
+        \end{minipage}
+        \\ 
+        \hline
+    \end{tabularx}
+}
+
+% --- Comando para la Tabla de Datos ---
+\newcommand{\TablaDatos}[6]{
+    \noindent
+    \begin{tabularx}{\textwidth}{|p{2.2cm}|X|p{3.2cm}|X|}
+        \hline
+        \textbf{Titulación:} & #1 & \textbf{Curso:} & #2 \\ \hline
+        \textbf{Módulo:} & #3 & \textbf{Fecha:} & #4 \\ \hline
+        \textbf{Examen:} & #5 & \textbf{Duración:} & #6 \\ \hline
+        \textbf{Nombre:} & & \cellcolor{grisclaro} \textbf{Calificación:} & \cellcolor{grisclaro} \\ \hline
+        \textbf{Apellidos:} & \multicolumn{3}{l|}{} \\ \hline
+        \textbf{RAs:} & \multicolumn{3}{l|}{} \\ \hline
+    \end{tabularx}
+}
+
+% --- Sección de Normas ---
+\newcommand{\NormasEInstrucciones}[1]{
+    \vspace{0.5cm}
+    \noindent
+    \begin{tabularx}{\textwidth}{|X|}
+        \hline
+        \textbf{\underline{NORMAS E INSTRUCCIONES. LEER ATENTAMENTE, POR FAVOR}} \\
+        \begin{itemize}[label=$\blacksquare$, leftmargin=1cm, nosep, after=\vspace{0.2cm}]
+            #1
+        \end{itemize} \\ \hline
+    \end{tabularx}
+    \vspace{0.5cm}
+}
+
+% --- Configuración de Matemáticas ---
+\everymath{\displaystyle}
+
+\endinput
